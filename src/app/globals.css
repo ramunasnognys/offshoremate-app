@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply bg-background text-text-primary;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-bold;
+  }
+
+  h1 {
+    @apply text-5xl sm:text-6xl lg:text-8xl xl:text-9xl;
+  }
+
+  h2 {
+    @apply text-4xl sm:text-5xl lg:text-6xl xl:text-7xl;
+  }
+
+  h3 {
+    @apply text-3xl sm:text-4xl lg:text-5xl xl:text-6xl;
+  }
+
+  p, li, a, button, input, textarea, select {
+    @apply font-body;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-accent-primary text-white py-3 px-6 rounded-md font-medium transition duration-300 hover:brightness-110 hover:shadow-md;
+  }
+  
+  .btn-secondary {
+    @apply bg-text-primary text-white py-3 px-6 rounded-md font-medium transition duration-300 hover:bg-accent-secondary;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-accent-primary text-accent-primary py-3 px-6 rounded-md font-medium transition duration-300 hover:bg-accent-primary hover:text-white;
+  }
+
+  .container-section {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .animate-on-scroll {
+    @apply opacity-0 transition-all duration-700;
+  }
+  
+  .animate-on-scroll.is-visible {
+    @apply opacity-100;
+  }
+}
